@@ -13,57 +13,82 @@ body {
   height          : 64px;
   display         : flex;
   justify-content : flex-end;
-  align-items: center;
+  align-items     : center;
   background-color: #C5CAE9;
 }
 
 .side-nav {
-  position       : fixed;
-  top            : 0;
-  left           : 0;
-  width          : 80px;
-  display        : flex;
-  align-items    : center;
-  justify-content: center;
-  flex-direction : column;
+  position      : absolute;
+  top           : 0;
+  left          : 0;
+  width         : 64px;
+  display       : flex;
+  flex-direction: column;
 }
 
 .side-nav-button-box {
   display         : flex;
   justify-content : center;
-  align-items: center;
-  width           : 80px;
+  align-items     : center;
+  width           : 64px;
   height          : 64px;
   background-color: #3F51B5;
 }
 
 .user-dashboard {
-  display         : flex;
-  flex-direction  : column;
-  justify-content : space-around;
-  align-items     : center;
   background-color: #303F9F;
+  height: 100vh;
 }
-.user-dashboard ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.user-dashboard li {
+
+.user {
+  display        : flex;
+  justify-content: center;
+  width          : 64px;
+  height         : 64px;
+  margin-top     : 16px;
+  margin-bottom  : 16px;
 
 }
+
+.user-img {
+  width        : 3rem;
+  height       : 3rem;
+  border-radius: 50%;
+  padding      : 1rem;
+  object-fit   : cover;
+}
+
 .media-box {
-  display: flex;
-  align-items: center;
-  width: 80px;
-  height: 64px;
+  display         : flex;
+  align-items     : center;
+  width           : 64px;
+  height          : 64px;
   background-color: #212121;
 }
-.user-img {
-  width: 3.5rem;
-  height: 3.5rem;
-  object-fit: ;
-  border-radius: 50%;
-  margin-bottom: 16px;
+.comment-container{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #BDBDBD;
+  z-index: -1;
+}
+.comment-section {
+  margin-left: 64px;
+}
+.comment {
+  background-color: white;
+  border-radius: 10%;
+  
+
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 90;
+  background-color:#C5CAE9 ;
 }
