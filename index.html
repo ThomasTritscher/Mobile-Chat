@@ -52,30 +52,36 @@
         <div class="user"><img src="img/female.jpg" class="user-img" alt=""></div>
       </div>
     </div>
-    <div class="comment-container">
-      <div class="comment-section">
-        <div class="comment">Hallo</div>
-      <div class="comment">Ciao</div>
-      <div class="comment">Hello</div>
-      <div class="comment">Hola</div>
-      <div class="comment">Privjet</div>
-      <div class="comment">Chema</div>
-      <div class="comment">Hoz geldeniz</div>
-      <div class="comment">Kalimera</div>
+    <div class="dialog-container">
+      <div class="dialog-section">
+        <div class="message-line">Hallo</div>
+        <div class="message-line">Ciao</div>
+        <div class="message-line">Hello</div>
+        <div class="message-line">Hola</div>
+        <div class="message-line">Privjet</div>
+        <div class="message-line">Chema</div>
+        <div class="message-line">Hoz geldeniz</div>
+        <div class="message-line">Kalimera</div>
       </div>
-      
+
     </div>
   </div>
   <footer>
     <div class="media-box">
       <!-- FAB button with ripple -->
-      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect">
-        <i class="material-icons" style="color:#BDBDBD">attach_file</i>
+      <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect ">
+        <i class="material-icons" style="color:#9e9a9a">attach_file</i>
       </button>
-
     </div>
-    <input type="text" placeholder="Type something to send">
-    <button>Send</button>
+    <div class="mdl-textfield mdl-js-textfield">
+      <textarea class="mdl-textfield__input" type="text" rows="1" id="message-input"></textarea>
+      <label class="mdl-textfield__label" for="message-input">Message</label>
+    </div>
+    <!-- Accent-colored raised button -->
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent btn-custom">
+      Send
+    </button>
+
   </footer>
 
 </body>

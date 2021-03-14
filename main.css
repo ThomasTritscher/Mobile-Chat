@@ -3,6 +3,21 @@ body {
 
 }
 
+.mdl-textfield {
+  position  : relative;
+  font-size : 16px;
+  display   : inline-block;
+  box-sizing: border-box;
+  width     : 50% !important;
+  max-width : 100%;
+  margin    : 0;
+  padding   : 16px 0 !important;
+}
+.btn-custom {
+  margin: 8px !important;
+}
+
+
 .main {
   display: flex;
 
@@ -14,7 +29,7 @@ body {
   display         : flex;
   justify-content : flex-end;
   align-items     : center;
-  background-color: #C5CAE9;
+  background-color:#FFFFFF;
 }
 
 .side-nav {
@@ -37,7 +52,7 @@ body {
 
 .user-dashboard {
   background-color: #303F9F;
-  height: 100vh;
+  height          : 100vh;
 }
 
 .user {
@@ -65,30 +80,34 @@ body {
   height          : 64px;
   background-color: #212121;
 }
-.comment-container{
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background-color: #BDBDBD;
-  z-index: -1;
+
+.dialog-container {
+  position        : fixed;
+  width           : 100vw;
+  height          : 100vh;
+  background-color:#C5CAE9;
+  z-index         : -1;
 }
-.comment-section {
+
+.dialog-section {
+  margin-top : 64px;
   margin-left: 64px;
 }
-.comment {
-  background-color: white;
-  border-radius: 10%;
-  
 
+.message-line {
+  background-color: #757575;
+  border-radius   : 8%;
+  margin          : 8px;
 }
+
 footer {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  z-index: 90;
-  background-color:#C5CAE9 ;
+  position        : fixed;
+  bottom          : 0;
+  right           : 0;
+  left            : 0;
+  width           : 100%;
+  display         : flex;
+  justify-content : space-between;
+  z-index         : 90;
+  background-color:#FFFFFF;
 }
