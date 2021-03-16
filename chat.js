@@ -1,16 +1,18 @@
 let messages = [];
 
-function loadChat() {
+
+// setURL('http://f013581c@thomas-tritscher.developerakademie.com/Mobile-Chat/backend');
+
+ function loadChat() {
   messages = getArray('messages') || [];
   let chat = document.getElementById('dialog_section');
   chat.innerHTML = '';
   for (let i = 0; i < messages.length; i++) {
     chat.innerHTML +=
-    `<div class="message-line">${messages[i]}</div>`
-    ;
-  }; 
+      `<div class="message-line">${messages[i]}</div>`
+      ;
+  };
 }
-
 
 function addMessage() {
   let message_text = document.getElementById
