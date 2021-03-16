@@ -1,9 +1,23 @@
 let messages = [];
 
+let users = [{
+  'user_img'    : 'img/female.jpg',
+  'lastname'    : 'Kruse',
+  'firstname'   : 'Maren',
+  'birth'        : '20.04.1983',
+  'mail'        : 'maren.kruse@gmail.com',
+},{
+  'user_img'    : 'img/female2.jpg',
+  'lastname'    : 'Meier',
+  'firstname'   : 'Kathrin',
+  'birth'        : '09.10.1990',
+  'mail'        : 'kathrin.meier@gmail.com',
+},
+];
 
 // setURL('http://f013581c@thomas-tritscher.developerakademie.com/Mobile-Chat/backend');
 
- function loadChat() {
+function loadChat() {
   messages = getArray('messages') || [];
   let chat = document.getElementById('dialog_section');
   chat.innerHTML = '';
