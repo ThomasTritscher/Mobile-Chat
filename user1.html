@@ -7,14 +7,15 @@
   <title>USER1</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src="./mini_backend.js"></script>
   <script src='chat.js'></script>
   <link rel="stylesheet" href="/node_modules/material-design-lite/material.min.css">
   <script src="/node_modules/material-design-lite/material.min.js"></script>
-  <script src="./mini_backend.js"></script>
+  
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
-<body onload="loadChat()">
+<body onload="loadData()">
   <div class="main">
     <div class="header-nav">
       <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
@@ -42,15 +43,15 @@
           <li class="mdl-menu__item">Impressum</li>
         </ul>
       </div>
-      <div class="user-dashboard">
-        <div class="user"><img src="img/female.jpg" class="user-img" alt=""></div>
+      <div id="user-dashboard" class="user-dashboard">
+        <!-- <div class="user"><img src="img/female.jpg" class="user-img" alt=""></div>
         <div class="user"><img src="img/female2.jpg" class="user-img" alt=""></div>
         <div class="user"><img src="img/female3.jpg" class="user-img" alt=""></div>
         <div class="user"><img src="img/male.jpg" class="user-img" alt=""></div>
         <div class="user"><img src="img/male2.jpg" class="user-img" alt=""></div>
         <div class="user"><img src="img/male3.jpg" class="user-img" alt=""></div>
         <div class="user"><img src="img/female2.jpg" class="user-img" alt=""></div>
-        <div class="user"><img src="img/female.jpg" class="user-img" alt=""></div>
+        <div class="user"><img src="img/female.jpg" class="user-img" alt=""></div> -->
       </div>
     </div>
     <div class="dialog-container">
