@@ -43,26 +43,26 @@ let users = [{
 },
 ];
 
-setURL('http://f013581c@thomas-tritscher.developerakademie.com/Mobile-Chat/backend');
+setURL('http://thomas-tritscher.developerakademie.com/Mobile-Chat/backend');
 
 /**
  * This function downloads data from server.
  */
-
 async function loadData() {
   await downloadFromServer();
   messages = JSON.parse(backend.getItem('messages')) || [];
   users = JSON.parse(backend.getItem('user_img')) || [];
+
+
 }
 
 
 async function loadUser() {
   await loadData();
-
   for (let i = 0; i < users.length; i++) {
     let user = users[i];
     document.getElementById('user-dashboard').innerHTML += `
-    <div class="user"><img src="${user['user_img']}"class="user-img" alt=""></div>`
+    <div onclick="showUserProfile()" class="user"><img src="${user['user_img']}"class="user-img" alt=""></div>`
   }
 
 }
@@ -111,6 +111,10 @@ function clearInputField() {
   document.getElementById('message_input').value = '';
 }
 
+function showUserProfile() {
+
+}
+
 
 // function saveArraytoLocalStorage(key, messages) {
 //   localStorage.setItem(key, JSON.stringify(messages));
@@ -120,3 +124,4 @@ function clearInputField() {
 // function getArray(key) {
 //   return JSON.parse(localStorage.getItem(key));
 // }
+
