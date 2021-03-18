@@ -49,8 +49,10 @@ setURL('http://thomas-tritscher.developerakademie.com/Mobile-Chat/backend');
  * This function downloads data from server.
  */
 async function loadData() {
+  console.log('loadData() called');
   await downloadFromServer();
-  messages = JSON.parse(backend.getItem('messages')) || [];
+  console.log('Downloaded data from server');
+  messages = JSON.parse(backend.getItem('message')) || [];
   users = JSON.parse(backend.getItem('user_img')) || [];
 
 
