@@ -98,12 +98,14 @@ function addMessage() {
 function clearInputField() {
   document.getElementById('message_input').value = '';
 }
-
-function showUserProfile() {
-
+function showUserProfile(){
+  document.getElementById('user-profile-card').classList.add('show-overlay-menu');
+}
+function closeUserProfile(){
+  document.getElementById('user-profile-card').classList.remove('show-overlay-menu');
 }
 /**
- * This function generated Listelemnts for profile-dashboard.
+ * This function generated list elements for profile-dashboard.
  */
 async function showProfileDashboard() {
   await loadData()
@@ -129,4 +131,3 @@ async function showProfileDashboard() {
 // function getArray(key) {
 //   return JSON.parse(localStorage.getItem(key));
 // }
-
