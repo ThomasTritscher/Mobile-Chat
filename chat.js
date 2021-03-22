@@ -102,6 +102,23 @@ function clearInputField() {
 function showUserProfile() {
 
 }
+/**
+ * This function generated Listelemnts for profile-dashboard.
+ */
+async function showProfileDashboard() {
+  await loadData()
+  for (let i = 0; i < users.length; i++) {
+    let user = users[i];
+    document.getElementById('profile-dashboard').innerHTML += `
+    <li>
+    <img src="../${user['user_img']}"class="user-img" alt="">
+    <p>${user['lastname']}</p><p>${user['firstname']}</p>
+     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+     Chat
+    </button>
+    </li>`;
+  }
+}
 
 
 // function saveArraytoLocalStorage(key, messages) {
