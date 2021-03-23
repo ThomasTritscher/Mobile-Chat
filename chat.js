@@ -68,6 +68,26 @@ function loadUser() {
   }
 
 }
+ function openUserCard(){
+  for (let i = 0; i < users.length; i++) {
+    let user = users[i];
+    document.getElementById('user-profile-card').innerHTML += `
+    <div onclick="closeUserProfile()" class="close-btn">
+      <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+        <i class="material-icons">close</i>
+      </button>
+    </div>
+    <img src="../img/female.jpg" alt="">
+    <ul>
+      <li>${user['firstname']}</li>
+      <li>${user['lastname']}</li>
+      <li>Birthdate</li>
+      <li>Media</li>
+      <li>Photo</li>
+    </ul>`
+  }
+
+ }
 
 async function loadChat() {
   await loadData();
@@ -100,6 +120,7 @@ function clearInputField() {
 }
 function showUserProfile(){
   document.getElementById('user-profile-card').classList.add('show-overlay-menu');
+  openUserCard();
 }
 function closeUserProfile(){
   document.getElementById('user-profile-card').classList.remove('show-overlay-menu');
@@ -121,6 +142,32 @@ async function showProfileDashboard() {
     </li>`;
   }
 }
+/**
+ * This function gets the user position.
+ */
+//  async function getCurrentUserPosition() {
+//   await loadData();
+//   let currentUserPosition
+//   currentUser = localStorage.getItem('firstname');
+//   for (let i = 0; i < users.length; i++) {
+//       if (currentUser == users[i].name) {
+//           currentUserPosition = i;
+//       }
+//   }
+//   localStorage.setItem('lastname', currentUserPosition);
+// }
+// async function showUserPicture() {
+//   await init();
+//   let userImg = document.getElementById('userImg');
+//   let currentUserPosition
+//   currentUser = localStorage.getItem('currentUser');
+//   for (let i = 0; i < users.length; i++) {
+//       if (currentUser == users[i].name) {
+//           currentUserPosition = i;
+//       }
+//   }
+//   userImg.src = `../php/profiles/${users[currentUserPosition].userPicture}`;
+// }
 
 
 // function saveArraytoLocalStorage(key, messages) {
