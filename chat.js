@@ -64,19 +64,19 @@ function loadUser() {
   for (let i = 0; i < users.length; i++) {
     let user = users[i];
     document.getElementById('user-dashboard').innerHTML += `
-    <div onclick="showUserProfile()" class="user"><img src="${user['user_img']}"class="user-img" alt=""></div>`
+    <div onclick="showUserProfile(${i})" class="user"><img src="${user['user_img']}"class="user-img" alt=""></div>`
   }
 
 }
- function openUserCard(){
-  for (let i = 0; i < users.length; i++) {
-    let user = users[i];
-    document.getElementById('user-profile-card').innerHTML += `
+ function openUserCard(index){
+    let user = users[index];
+    document.getElementById('user-profile-card').innerHTML = `
     <div onclick="closeUserProfile()" class="close-btn">
       <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
         <i class="material-icons">close</i>
       </button>
     </div>
+    <div>
     <img src="../img/female.jpg" alt="">
     <ul>
       <li>${user['firstname']}</li>
@@ -84,11 +84,10 @@ function loadUser() {
       <li>Birthdate</li>
       <li>Media</li>
       <li>Photo</li>
-    </ul>`
-  }
-
+    </ul>
+    </div>
+    `
  }
-
 async function loadChat() {
   await loadData();
   let chat = document.getElementById('dialog_section');
@@ -118,9 +117,9 @@ function addMessage() {
 function clearInputField() {
   document.getElementById('message_input').value = '';
 }
-function showUserProfile(){
+function showUserProfile(index){
   document.getElementById('user-profile-card').classList.add('show-overlay-menu');
-  openUserCard();
+  openUserCard(index);
 }
 function closeUserProfile(){
   document.getElementById('user-profile-card').classList.remove('show-overlay-menu');
